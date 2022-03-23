@@ -28,7 +28,7 @@ This library bundles up PDL API requests into simple function calls, making it e
 1. Pull the package from the npm repository:
 
 ```bash
-pip install pypdl
+pip install git+https://github.com/bakhtikyan/peopledatalabs-py.git
 ```
 
 2. Sign up for a [free PDL API key](https://www.peopledatalabs.com/signup)
