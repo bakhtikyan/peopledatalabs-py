@@ -1,28 +1,21 @@
-from src.endpoints import enrichment
+from pypdl.endpoints import *
 
 
-class Person:
+class Company:
     """
-    Person Class Description
+    Company Class Description
     """
     def __init__(self, api_key, base_path):
         self.api_key = api_key
         self.base_path = base_path
-        self.category = 'person'
+        self.category = 'company'
 
     def enrichment(self, params):
         return enrichment(self.base_path, self.api_key, self.category, params)
 
     def search(self):
-        pass
+        return search()
 
-    def bulk(self):
-        pass
-
-    def identify(self):
-        pass
-
-    def retrieve(self):
-        pass
-
+    def cleaner(self):
+        return cleaner()
 

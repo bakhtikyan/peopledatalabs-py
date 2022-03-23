@@ -1,9 +1,11 @@
-from tests.util import *
+import pytest
+from pypdl.pypdl import PyPDL
+from util import *
 
 
-def test_with_phone(enrichment_client):
+def test_with_phone(pypdl_client):
     phone = {'phone': '4155688415'}
-    data = enrichment_client.person().enrichment(phone)
+    data = pypdl_client.person().enrichment(phone)
 
     assert data['status'] == 200
     assert data['data']['full_name'] == 'sean thorne'
@@ -19,9 +21,9 @@ def test_with_phone(enrichment_client):
     assert data['data']['industry'] == 'computer software'
 
 
-def test_with_likedin_profile(enrichment_client):
+def test_with_likedin_profile(pypdl_client):
     profile = {'profile': ['linkedin.com/in/seanthorne']}
-    data = enrichment_client.person().enrichment(profile)
+    data = pypdl_client.person().enrichment(profile)
 
     assert data['status'] == 200
     assert data['data']['full_name'] == 'sean thorne'

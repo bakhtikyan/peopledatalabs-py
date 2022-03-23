@@ -1,10 +1,10 @@
 import pytest
 
-from src.pypdl import PyPDL
+from pypdl.pypdl import PyPDL
 
 
 @pytest.fixture
-def enrichment_client():
+def pypdl_client():
     api = 'YOUR_API_KEY'
     pdl = PyPDL(api)
 

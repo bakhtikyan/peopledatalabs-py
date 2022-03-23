@@ -3,7 +3,7 @@ import json
 import requests
 
 
-def enrichment(base_path, api_key, category, params: dict, *args):
+def enrichment(base_path, api_key, category, params: dict):
     try:
         headers = {
             'Accept-Encoding': 'gzip',
